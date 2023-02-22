@@ -32,7 +32,67 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
+
+/*JH*/
+
+.btn {
+  background: #EE121E !important;
+  border-color: #EE121E !important;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.footer {
+  background: #151515;
+  text-align: center;
+  color: white;
+  padding: 5%;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.homepage-container {
+  min-height: 100vh;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  display: grid;
+}
+
+.heroes-column {
+  padding-bottom: 2%;
+}
+
+.heroes-row {
+  padding-top: 5%;
+}
+
+.logo-text {
+  color: white !important;
+}
+
+.navbar {
+  background: #202020;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.search-input {
+  margin-right: 10px;
+}
+
+/*END*/
