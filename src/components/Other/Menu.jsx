@@ -9,7 +9,7 @@ export default function Menu() {
     return (
         <Navbar expand="lg" sticky="top" className="nav-bar">
             <Container>
-                <Navbar.Brand as={Link} to="/" className="logo-text">Marvel App</Navbar.Brand>
+                <Navbar.Brand as={Link} to={`/${heroName}`} className="logo-text">Marvel App</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ml-auto">
