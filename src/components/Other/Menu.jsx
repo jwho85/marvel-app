@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 
 export default function Menu() {
 
+    const heroName = localStorage.getItem('heroName');
+
     return (
         <Navbar expand="lg" sticky="top" className="nav-bar">
             <Container>
@@ -11,7 +13,7 @@ export default function Menu() {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ml-auto">
-                        <Nav.Link as={Link} to={"/"}>Heroes</Nav.Link>
+                        <Nav.Link as={Link} to={`/${heroName}`}>Heroes</Nav.Link>
                         <Nav.Link as={Link} to={"/comics"}>Comics</Nav.Link>
                         <Nav.Link as={Link} to={"/events"}>Events</Nav.Link>
                         <Nav.Link as={Link} to={"/series"}>Series</Nav.Link>

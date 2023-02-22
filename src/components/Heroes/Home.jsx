@@ -6,6 +6,9 @@ import { Link, useNavigate } from "react-router-dom";
 
 export default function Home() {
 
+    let { name } = useParams();
+    let navigate = useNavigate();
+
     const [heroName, setHeroName] = useState("");
     const [heroes, setHeroes] = useState([]);
     const [hero, setHero] = useState([]);
@@ -17,7 +20,7 @@ export default function Home() {
     const buttonNameRef = useRef();
 
     useEffect(() => {
-        // localStorage.setItem('heroName', heroLinkName);
+        localStorage.setItem('heroName', name);
         const heroName = localStorage.getItem('heroName');
         setHeroName(heroName);
         handleClick(heroName);
@@ -38,6 +41,7 @@ export default function Home() {
             let data = await fetchCharacters(heroName);
             setHeroes(data.data.results);
             localStorage.setItem('heroName', heroName);
+            navigate(`/${heroName}`);
         } catch (err) {
             return err;
         }

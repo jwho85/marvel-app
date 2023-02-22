@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import { fetchSeriesByCreatorID, fetchSeriesBySeriesID } from '../../utils/utils';
 import { Container, Row, Col, Card, CardHeader, CardImg, Button, Modal } from 'react-bootstrap';
 import { useParams } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-export default function Series() {
+export default function CreatorSeries() {
 
     let { id } = useParams();
 
@@ -67,7 +68,9 @@ export default function Series() {
                         <h6>Characters</h6>
                         <ul>
                             {data.characters.items.length > 0 ? data.characters.items.map(character => (
-                                <li key={randomKey}>{character.name}</li>
+                                <Link to={"/" + character.name}>
+                                    <li key={randomKey}>{character.name}</li>
+                                </Link>
                             )) : "No characters available"}
                         </ul>
                         <h6>Creators</h6>

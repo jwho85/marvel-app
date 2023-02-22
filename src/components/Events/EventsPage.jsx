@@ -95,7 +95,9 @@ export default function ComicsPage() {
                         <h6>Characters</h6>
                         <ul>
                             {data.characters.items.length > 0 ? data.characters.items.map(character => (
-                                <li>{character.name}</li>
+                                <Link to={"/" + character.name}>
+                                    <li>{character.name}</li>
+                                </Link>
                             )) : "No characters available"}
                         </ul>
                         <h6>Creators</h6>

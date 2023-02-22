@@ -24,7 +24,7 @@ export default function App() {
       <Menu />
       <Routes>
         {/* Heroes */}
-        <Route exact path={'/'} element={<Home />} />
+        <Route path={'/:name'} element={<Home />} />
         <Route exact path={'/characters/:id/comics'} element={<HeroComics />} />
         <Route exact path={'/characters/:id/events'} element={<HeroEvents />} />
         <Route exact path={'/characters/:id/series'} element={<HeroSeries />} />
