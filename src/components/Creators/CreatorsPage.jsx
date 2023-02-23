@@ -1,9 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
 import { fetchCreators, fetchCreatorsByCreatorID } from '../../utils/utils';
 import { Container, Row, Col, Card, CardHeader, CardImg, Button, Modal } from 'react-bootstrap';
+import { useParams } from "react-router-dom";
 import { Link, useNavigate } from "react-router-dom";
 
 export default function CreatorsPage() {
+
+    let { cName } = useParams();
+    let navigate = useNavigate();
 
     const [creatorName, setCreatorName] = useState("");
     const [creators, setCreators] = useState([]);
@@ -16,6 +20,7 @@ export default function CreatorsPage() {
     const buttonNameRef = useRef();
 
     useEffect(() => {
+        localStorage.setItem('creatorName', cName);
         const creatorName = localStorage.getItem('creatorName');
         setCreatorName(creatorName);
         handleClick(creatorName);
@@ -37,6 +42,7 @@ export default function CreatorsPage() {
             let data = await fetchCreators(creatorName);
             setCreators(data.data.results);
             localStorage.setItem('creatorName', creatorName);
+            navigate(`/creators/${creatorName}`);
         } catch (err) {
             return err;
         }

@@ -76,7 +76,9 @@ export default function Stories() {
                         <h6>Creators</h6>
                         <ul>
                             {data.creators.items.length > 0 ? data.creators.items.map(creator => (
-                                <li>{creator.name}, {creator.role}</li>
+                                <Link to={"/creators/" + creator.name}>
+                                    <li>{creator.name}, {creator.role}</li>
+                                </Link>
                             )) : "No creators available"}
                         </ul>
                     </Modal.Body>

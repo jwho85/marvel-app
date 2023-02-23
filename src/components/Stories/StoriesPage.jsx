@@ -95,13 +95,17 @@ export default function ComicsPage() {
                         <h6>Characters</h6>
                         <ul>
                             {data.characters.items.length > 0 ? data.characters.items.map(character => (
-                                <li>{character.name}</li>
+                                <Link to={"/" + character.name}>
+                                    <li>{character.name}</li>
+                                </Link>
                             )) : "No characters available"}
                         </ul>
                         <h6>Creators</h6>
                         <ul>
                             {data.creators.items.length > 0 ? data.creators.items.map(creator => (
-                                <li>{creator.name}, {creator.role}</li>
+                                <Link to={"/creators/" + creator.name}>
+                                    <li>{creator.name}, {creator.role}</li>
+                                </Link>
                             )) : "No creators available"}
                         </ul>
                     </Modal.Body>

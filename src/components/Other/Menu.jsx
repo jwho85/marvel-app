@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 export default function Menu() {
 
     const heroName = localStorage.getItem('heroName');
+    const creatorName = localStorage.getItem('creatorName');
 
     return (
         <Navbar expand="lg" sticky="top" className="nav-bar">
@@ -18,7 +19,7 @@ export default function Menu() {
                         <Nav.Link as={Link} to={"/events"}>Events</Nav.Link>
                         <Nav.Link as={Link} to={"/series"}>Series</Nav.Link>
                         {/* <Nav.Link as={Link} to={"/stories"}>Stories</Nav.Link> */}
-                        <Nav.Link as={Link} to={"/creators"}>Creators</Nav.Link>
+                        <Nav.Link as={Link} to={`/creators/${creatorName}`}>Creators</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

@@ -6,7 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 export default function Home() {
 
-    let { name } = useParams();
+    let { hName } = useParams();
     let navigate = useNavigate();
 
     const [heroName, setHeroName] = useState("");
@@ -20,7 +20,7 @@ export default function Home() {
     const buttonNameRef = useRef();
 
     useEffect(() => {
-        localStorage.setItem('heroName', name);
+        localStorage.setItem('heroName', hName);
         const heroName = localStorage.getItem('heroName');
         setHeroName(heroName);
         handleClick(heroName);
