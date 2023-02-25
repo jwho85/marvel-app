@@ -6,8 +6,6 @@ import { Link, useNavigate } from "react-router-dom";
 
 export default function Home() {
 
-    //test comment
-
     let { hName } = useParams();
     let navigate = useNavigate();
 
