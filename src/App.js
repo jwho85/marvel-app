@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Menu from './components/Other/Menu';
 import Footer from './components/Other/Footer';
 import Home from './components/Heroes/Home';
@@ -19,12 +19,13 @@ import SeriesPage from './components/Series/SeriesPage';
 import StoriesPage from './components/Stories/StoriesPage';
 
 export default function App() {
+
   return (
-    <Router>
+    <HashRouter>
       <Menu />
       <Routes>
         {/* Heroes */}
-        <Route exact path={'/:hName'} element={<Home />} />
+        <Route path={'/:hName'} element={<Home />} />
         <Route exact path={'/characters/:id/comics'} element={<HeroComics />} />
         <Route exact path={'/characters/:id/events'} element={<HeroEvents />} />
         <Route exact path={'/characters/:id/series'} element={<HeroSeries />} />
@@ -38,13 +39,13 @@ export default function App() {
         {/* Stories */}
         <Route exact path={'/stories'} element={<StoriesPage />} />
         {/* Creators */}
-        <Route exact path={'/creators/:cName'} element={<CreatorsPage />} />
+        <Route path={'/creators/:cName'} element={<CreatorsPage />} />
         <Route exact path={'/creators/:id/comics'} element={<CreatorComics />} />
         <Route exact path={'/creators/:id/events'} element={<CreatorEvents />} />
         <Route exact path={'/creators/:id/series'} element={<CreatorSeries />} />
         <Route exact path={'/creators/:id/stories'} element={<CreatorStories />} />
       </Routes>
       <Footer />
-    </Router>
+    </HashRouter>
   );
 }

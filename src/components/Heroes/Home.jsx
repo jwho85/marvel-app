@@ -74,7 +74,7 @@ export default function Home() {
                             className="heroes-column"
                             md={4}
                         >
-                            <Card key={hero.id}>
+                            <Card key={randomKey}>
                                 <Card.Img src={`${hero.thumbnail.path}.${hero.thumbnail.extension}`} />
                                 <Card.Body>
                                     <Card.Title>{hero.name}</Card.Title>

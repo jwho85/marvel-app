@@ -75,7 +75,7 @@ export default function CreatorsPage() {
                             className="heroes-column"
                             md={4}
                         >
-                            <Card key={creator.id}>
+                            <Card key={randomKey}>
                                 <Card.Img src={`${creator.thumbnail.path}.${creator.thumbnail.extension}`} />
                                 <Card.Body>
                                     <Card.Title>{creator.firstName} {creator.lastName}</Card.Title>

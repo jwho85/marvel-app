@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from "react";
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { Link } from "react-router-dom";
 
 export default function Menu() {
 
-    const heroName = localStorage.getItem('heroName');
-    const creatorName = localStorage.getItem('creatorName');
+    const [heroName, setHeroName] = useState("");
+    const [creatorName, setCreatorName] = useState("");
+
+    useEffect(() => {
+        setHeroName(localStorage.getItem('heroName'));
+        setCreatorName(localStorage.getItem('creatorName'));
+
+    }, []);
 
     return (
         <Navbar expand="lg" sticky="top" className="nav-bar">
