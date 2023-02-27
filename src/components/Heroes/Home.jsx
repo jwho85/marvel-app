@@ -20,7 +20,9 @@ export default function Home() {
     const buttonNameRef = useRef();
 
     useEffect(() => {
-        localStorage.setItem('heroName', hName);
+        if (hName) {
+            localStorage.setItem('heroName', hName);
+        }
         const heroName = localStorage.getItem('heroName');
         setHeroName(heroName);
         handleClick(heroName);

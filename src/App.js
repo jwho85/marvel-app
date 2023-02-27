@@ -25,7 +25,7 @@ export default function App() {
       <Menu />
       <Routes>
         {/* Heroes */}
-        <Route path={'/:hName'} element={<Home />} />
+        <Route path={'/:hName?'} element={<Home />} />
         <Route exact path={'/characters/:id/comics'} element={<HeroComics />} />
         <Route exact path={'/characters/:id/events'} element={<HeroEvents />} />
         <Route exact path={'/characters/:id/series'} element={<HeroSeries />} />
@@ -39,7 +39,7 @@ export default function App() {
         {/* Stories */}
         <Route exact path={'/stories'} element={<StoriesPage />} />
         {/* Creators */}
-        <Route path={'/creators/:cName'} element={<CreatorsPage />} />
+        <Route path={'/creators/:cName?'} element={<CreatorsPage />} />
         <Route exact path={'/creators/:id/comics'} element={<CreatorComics />} />
         <Route exact path={'/creators/:id/events'} element={<CreatorEvents />} />
         <Route exact path={'/creators/:id/series'} element={<CreatorSeries />} />

@@ -20,7 +20,9 @@ export default function CreatorsPage() {
     const buttonNameRef = useRef();
 
     useEffect(() => {
-        localStorage.setItem('creatorName', cName);
+        if (cName) {
+            localStorage.setItem('creatorName', cName);
+        }
         const creatorName = localStorage.getItem('creatorName');
         setCreatorName(creatorName);
         handleClick(creatorName);
