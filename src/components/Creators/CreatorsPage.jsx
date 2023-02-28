@@ -105,7 +105,7 @@ export default function CreatorsPage() {
                                 </Card.Body>
                             </Card>
                         </Col>
-                    )) : "No creators available"}
+                    )) : "Please search for a creator"}
                 </Row>
             </div>
             {/* {creator.map(data => (

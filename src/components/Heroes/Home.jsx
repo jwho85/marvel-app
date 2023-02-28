@@ -109,7 +109,7 @@ export default function Home() {
                                 </Card.Body>
                             </Card>
                         </Col>
-                    )) : "No heroes available"}
+                    )) : "Please search for a hero"}
                 </Row>
             </div>
             {hero.map(data => (

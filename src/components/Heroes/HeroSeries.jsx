@@ -55,7 +55,7 @@ export default function Series() {
                             </Card.Body>
                         </Card>
                     </Col>
-                )) : "No series to show"}
+                )) : "No series available"}
             </Row>
             {issue.map(data => (
                 <Modal show={show} onHide={handleClose}>

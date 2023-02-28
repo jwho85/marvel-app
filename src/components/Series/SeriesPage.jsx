@@ -81,7 +81,7 @@ export default function ComicsPage() {
                                 </Card.Body>
                             </Card>
                         </Col>
-                    )) : "No comics available"}
+                    )) : "Please search for a series"}
                 </Row>
             </div>
             {issue.map(data => (
