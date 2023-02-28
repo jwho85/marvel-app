@@ -91,6 +91,10 @@
   color: white !important;
 }
 
+.navbar-toggler:not(:disabled):not(.disabled) {
+  background: #efefef !important;
+}
+
 .search-input {
   margin-right: 10px;
 }
